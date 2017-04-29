@@ -1,0 +1,21 @@
+---
+
+- name: Make sure there is "wheel" group.
+  group:
+    name: wheel
+    state: present
+
+- name: Make sure "wheel" group has passwordless sudo.
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: "^%wheel"
+    line: "%wheel ALL=(ALL) NOPASSWD: ALL"
+    validate: visudo -cf %s
+
+- name: Make sure specified users were added "wheel" group.
+  user:
+    name: "{{ item }}"
+    groups: wheel
+    append: yes
+  with_items: "{{ sudoers_users }}"

@@ -1,0 +1,4 @@
+---
+
+# Used for adding users to passwordless sudo group.
+sudoers_users: []
