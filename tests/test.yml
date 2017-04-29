@@ -3,4 +3,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - danylevskyi.sudoers
+    - ansible-role-sudoers
