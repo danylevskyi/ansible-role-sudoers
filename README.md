@@ -29,6 +29,10 @@ None.
       roles:
          - { role: danylevskyi.sudoers }
 
+## TODO
+
+  - Add tests.
+
 ## License
 
 BSD / MIT
