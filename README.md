@@ -1,5 +1,7 @@
 # Ansible Role: Sudoers
 
+[![Build Status](https://travis-ci.org/danylevskyi/ansible-role-sudoers.svg?branch=master)](https://travis-ci.org/danylevskyi/ansible-role-sudoers)
+
 Add specified users to passwordless sudo group.
 
 ## Requirements
